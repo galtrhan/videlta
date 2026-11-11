@@ -9,6 +9,19 @@ a character moves over a fixed background, a title card sits still, a camera is
 locked off. On a noisy or fast-moving video the deltas approach full frames and
 the size advantage disappears.
 
+## Demo
+
+Left is the source clip. Right is the same clip rebuilt by stacking the base
+frame and every delta PNG in order (game-style sprite playback).
+
+![Source video next to videlta sprite playback](demo/side-by-side.gif)
+
+First 3 seconds of the sample candle clip, 10 fps, 320 px wide.
+
+Source video by [jrydertr](https://pixabay.com/users/jrydertr-29142268/) from
+[Pixabay](https://pixabay.com/videos/candlelight-candle-flame-light-123824/)
+(Content License). Demo files live in `demo/`.
+
 ## Build
 
 ```
@@ -129,3 +142,13 @@ Independent verification was done with a separate Python/Pillow compositor, not
 with the program's own code. Lossless worst error equalled the threshold (8).
 Keyed worst error stayed at the background tolerance. Mean error stayed under
 0.3.
+
+## Test media
+
+Manual checks use a local `test/sample.mp4` download of the Pixabay candle clip
+above. Files under `test/` stay gitignored. Files under `demo/` are tracked.
+
+## License
+
+MIT. Redistributing it, modified or not, means keeping the copyright notice and
+the permission notice in the source. See `LICENSE`.
