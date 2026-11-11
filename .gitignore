@@ -1,0 +1,5 @@
+# Local smoke tests and their outputs
+/test/
+
+# Built binary
+/videlta
